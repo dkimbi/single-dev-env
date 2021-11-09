@@ -1,9 +1,9 @@
 package main
 
 import (
-"fmt"
-"log"
-"net/http"
+	"fmt"
+	"log"
+	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -21,6 +21,15 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	
 Hello from Docker!
 
+┏━━━┓┏┓━━━━━━━━━━━━┏┓━━━━━━┏┓━━━━━━┏┓━
+┃┏━┓┃┃┃━━━━━━━━━━━┏┛┗┓━━━━━┃┃━━━━━━┃┃━
+┃┃━┗┛┃┗━┓┏━┓┏┓┏━━┓┗┓┏┛┏━━┓━┃┗━┓┏━━┓┃┃━
+┃┃━┏┓┃┏┓┃┃┏┛┣┫┃━━┫━┃┃━┗━┓┃━┃┏┓┃┃┏┓┃┃┃━
+┃┗━┛┃┃┃┃┃┃┃━┃┃┣━━┃━┃┗┓┃┗┛┗┓┃┗┛┃┃┃━┫┃┗┓
+┗━━━┛┗┛┗┛┗┛━┗┛┗━━┛━┗━┛┗━━━┛┗━━┛┗━━┛┗━┛
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 `)
 }
 
@@ -28,4 +37,3 @@ func main() {
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
